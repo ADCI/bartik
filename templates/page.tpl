@@ -34,7 +34,7 @@
       </div> <!-- /#name-and-slogan -->
     {/if}
 
-    {$.php.fenom_engine_render($page['header'])}
+    {render($page['header'])}
 
     {if ($main_menu)}
       <div id="main-menu" class="navigation">
@@ -80,7 +80,7 @@
 
   {if ($page['featured'])}
     <div id="featured"><div class="section clearfix">
-      {$.php.fenom_engine_render($page['featured'])}
+      {render($page['featured'])}
     </div></div> <!-- /.section, /#featured -->
   {/if}
 
@@ -92,39 +92,39 @@
 
     {if ($page['sidebar_first'])}
       <div id="sidebar-first" class="column sidebar"><div class="section">
-        {$.php.fenom_engine_render($page['sidebar_first'])}
+        {render($page['sidebar_first'])}
       </div></div> <!-- /.section, /#sidebar-first -->
     {/if}
 
     <div id="content" class="column"><div class="section">
-      {if ($page['highlighted'])}<div id="highlighted">{$.php.fenom_engine_render($page['highlighted'])}</div>{/if}
+      {if ($page['highlighted'])}<div id="highlighted">{render($page['highlighted'])}</div>{/if}
       <a id="main-content"></a>
-      {$.php.fenom_engine_render($title_prefix)}
+      {render($title_prefix)}
       {if ($title)}
         <h1 class="title" id="page-title">
           {$title}
         </h1>
       {/if}
-      {$.php.fenom_engine_render($title_suffix)}
+      {render($title_suffix)}
       {if ($tabs)}
         <div class="tabs">
-          {$.php.fenom_engine_render($tabs)}
+          {render($tabs)}
         </div>
       {/if}
-      {$.php.fenom_engine_render($page['help'])}
+      {render($page['help'])}
       {if ($action_links)}
         <ul class="action-links">
-          {$.php.fenom_engine_render($action_links)}
+          {render($action_links)}
         </ul>
       {/if}
-      {$.php.fenom_engine_render($page['content'])}
+      {render($page['content'])}
       {$feed_icons}
 
     </div></div> <!-- /.section, /#content -->
 
     {if ($page['sidebar_second'])}
       <div id="sidebar-second" class="column sidebar"><div class="section">
-        {$.php.fenom_engine_render($page['sidebar_second'])}
+        {render($page['sidebar_second'])}
       </div></div> <!-- /.section, /#sidebar-second -->
     {/if}
 
@@ -132,9 +132,9 @@
 
   {if ($page['triptych_first'] || $page['triptych_middle'] || $page['triptych_last'])}
     <div id="triptych-wrapper"><div id="triptych" class="clearfix">
-      {$.php.fenom_engine_render($page['triptych_first'])}
-      {$.php.fenom_engine_render($page['triptych_middle'])}
-      {$.php.fenom_engine_render($page['triptych_last'])}
+      {render($page['triptych_first'])}
+      {render($page['triptych_middle'])}
+      {render($page['triptych_last'])}
     </div></div> <!-- /#triptych, /#triptych-wrapper -->
   {/if}
 
@@ -142,20 +142,19 @@
 
     {if ($page['footer_firstcolumn'] || $page['footer_secondcolumn'] || $page['footer_thirdcolumn'] || $page['footer_fourthcolumn'])}
       <div id="footer-columns" class="clearfix">
-        {$.php.fenom_engine_render($page['footer_firstcolumn'])}
-        {$.php.fenom_engine_render($page['footer_secondcolumn'])}
-        {$.php.fenom_engine_render($page['footer_thirdcolumn'])}
-        {$.php.fenom_engine_render($page['footer_fourthcolumn'])}
+        {render($page['footer_firstcolumn'])}
+        {render($page['footer_secondcolumn'])}
+        {render($page['footer_thirdcolumn'])}
+        {render($page['footer_fourthcolumn'])}
       </div> <!-- /#footer-columns -->
     {/if}
 
     {if ($page['footer'])}
       <div id="footer" class="clearfix">
-        {$.php.fenom_engine_render($page['footer'])}
+        {render($page['footer'])}
       </div> <!-- /#footer -->
     {/if}
 
   </div></div> <!-- /.section, /#footer-wrapper -->
 
 </div></div> <!-- /#page, /#page-wrapper -->
-
